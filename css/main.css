@@ -17,13 +17,6 @@ li, a{
     background-color: #7579e7;
 }
 
-button{
-    color: #7579e7;
-    background-color: #7579e7;
-}
-
-
-
 header{
     display: flex;
     justify-content: space-between;
@@ -57,7 +50,10 @@ header{
     color: #52057b;
 }
 
-button{
+.credits{
+    color: #7579e7;
+    background-color: #7579e7;
+
     padding: 9px 25px;
     background-color: #b9fffc;
     border: none;
@@ -67,20 +63,48 @@ button{
     transition: all 0.3s ease 0s;  
 }
 
-button:hover{
+.credits:hover{
     color: #52057b;
     background-color: #a3d8f4;
 }
 
+.selection{
+    padding: 75px 0px 0px 0px;
+    text-align: center;
+}
+
+.selection button{
+    margin: 15px;
+    padding: 25px 25px;
+    background-color: #7579e7;
+    color: #f1f6f9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s; 
+}
+
+.selection button:hover{
+    background-color: #8084fc;
+    color: #52057b;
+}
+
+.selection button:focus{
+    background-color: #4f53b9;
+    color: #f1f6f9;
+}
+
 .realTime{
     color: #f1f6f9;
-    padding: 200px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
     text-align: center;
 }
+
 .day{
     font-weight: 300;
     font-size: 41px;

@@ -19,8 +19,17 @@
                     <li><a href="alarm.html">Alarm</a></li>
                 </ul>
             </nav>
-            <a href="#" class="cta"><button>Credits</button></a>
+            <a href="#"><button class="credits">Credits</button></a>
         </header>
+
+        <div class="selection">
+            <button onclick="tf()">
+                24
+            </button>
+            <button onclick="tw()">
+                12
+            </button>            
+        </div>
 
         <div class="realTime">
             <h1>
@@ -36,6 +45,7 @@
         <script type="text/javascript">
             setInterval(clock,1);
 
+            var change = true;
             function getDay(code){
                 switch(code){
                     case 0:
@@ -124,13 +134,41 @@
                 return code;
             }
 
+            function convert(text){
+                if(text==0)
+                    return 12;
+                else if(text>12)
+                    return text%12;
+                return text;
+            }
+
+            function period(text){
+                if(text>=12)
+                    return " pm";
+                return " am";
+            }
+
+            function tf(){
+                change = true;
+            }
+
+            function tw(){
+                change = false;
+            }
+
             function clock(){
                 var time = new Date();
                 var hrs = time.getHours(), mins = time.getMinutes(), secs = time.getSeconds();  
                 var day = time.getDay(), date = time.getDate(), month = time.getMonth(), year = time.getFullYear();
-
-                document.getElementById('time').innerHTML = hrs + ":" + mins + ":" + fixSecs(secs);
-                document.getElementById('day').innerHTML = getDay(day) + ", " + date + getDate(date).sup()  + " " + getMonth(month) + ", " + year;
+                if(change){
+                    document.getElementById('time').innerHTML = fixSecs(hrs) + ":" + fixSecs(mins) + ":" + fixSecs(secs);
+                    document.getElementById('day').innerHTML = getDay(day) + ", " + date + getDate(date).sup()  + " " + getMonth(month) + ", " + year;
+                }
+                else{
+                    document.getElementById('time').innerHTML = fixSecs(convert(hrs)) + ":" + fixSecs(mins) + ":" + fixSecs(secs) + period(hrs).fontsize(50);
+                    document.getElementById('day').innerHTML = getDay(day) + ", " + date + getDate(date).sup()  + " " + getMonth(month) + ", " + year;
+                }
+                
             }
         </script>
     </body>
