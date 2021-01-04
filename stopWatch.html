@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/stopwatch.css">
     </head>
     <body>
         <header>
@@ -19,6 +20,37 @@
                     <li><a href="alarm.html">Alarm</a></li>
                 </ul>
             </nav>
-            <a href="#" class="cta"><button>Credits</button></a>
+            <a href="#"><button class="credits">Credits</button></a>
+        </header>
+
+        <div class="options">
+            <button>
+                Millis
+            </button>
+            <button>
+                Seconds
+            </button>
+        </div>
+
+        <div class="realTime">
+            <h1>
+                <div id = "time" class="time">
+                    00:00:00
+                </div>
+            </h1>
+        </div>
+
+        <div class="function">
+            <button>
+                RESET
+            </button>
+            <button>
+                START
+            </button>
+            <button>
+                Lap
+            </button>
+        </div>
+
     </body>
 </html>
