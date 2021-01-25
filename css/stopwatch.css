@@ -1,0 +1,33 @@
+.options{
+    padding: 75px 0px 0px 0px;
+    text-align: center;
+}
+
+.options button{
+    margin: 15px;
+    background-color: #7579e7;
+    color: #f1f6f9;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s; 
+}
+
+.seconds{
+    padding: 10px 25px;
+}
+
+.millis{
+    padding: 10px 40px;
+}
+
+.options button:hover{
+    background-color: #8084fc;
+    color: #52057b;
+}
+
+.options button:focus{
+    background-color: #4f53b9;
+    color: #f1f6f9;
+}
